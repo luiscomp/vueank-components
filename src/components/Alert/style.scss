@@ -1,0 +1,133 @@
+@import '../../assets/scss/base/mixins';
+@import 'root';
+
+.sf-alert {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin: 0px;
+	padding: 16px 20px;
+	background-color: var(--disabled);
+	border-radius: 0px 12px 12px 0px;
+	transition: all 200ms ease-out;
+
+	.line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 2px;
+
+		&--primary {
+			background-color: var(--primary) !important
+		}
+
+		&--success {
+			background-color: var(--success) !important
+		}
+
+		&--warn {
+			background-color: var(--warn) !important
+		}
+
+		&--danger {
+			background-color: var(--danger) !important
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 14px;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		cursor: pointer;
+		transition: all 200ms;
+
+		&:hover {
+			background-color: var(--disabled);
+			border-radius: 50%;
+		}
+	}
+
+	.icon-content {
+		display: flex;
+		padding: 0px 5px;
+		align-items: center;
+		justify-content: center;
+
+		.icon {
+			font-size: 22px;
+			margin-right: 16px;
+		}
+	}
+
+	.alert-content {
+		.title {
+			margin: 0px;
+		}
+
+		.text {
+			margin: 10px 0px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&--primary {
+		@include primary_color;
+		background-color: var(--primary-t) !important;
+		border: 1px solid var(--transparent);
+	}
+
+	&--success {
+		@include success_color;
+		background-color: var(--success-t) !important;
+		border: 1px solid var(--transparent);
+	}
+
+	&--warn {
+		@include warn_color;
+		background-color: var(--warn-t) !important;
+		border: 1px solid var(--transparent);
+	}
+
+	&--danger {
+		@include danger_color;
+		background-color: var(--danger-t) !important;
+		border: 1px solid var(--transparent);
+	}
+}
+
+.border {
+	color: var(--primary);
+	background-color: white !important;
+	border: 1px solid var(--primary);
+
+	&--primary {
+		@include primary_color;
+		border: 1px solid var(--primary) !important
+	}
+
+	&--success {
+		@include success_color;
+		border: 1px solid var(--success) !important
+	}
+
+	&--warn {
+		@include warn_color;
+		border: 1px solid var(--warn) !important
+	}
+
+	&--danger {
+		@include danger_color;
+		border: 1px solid var(--danger) !important
+	}
+}
+
+.shadow {
+	-webkit-box-shadow: 2px 5px 5px 2px var(--disabled);
+	box-shadow: 2px 5px 5px 2px var(--disabled);
+}

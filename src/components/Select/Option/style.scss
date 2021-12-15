@@ -1,0 +1,38 @@
+.sf-option {
+	font-size: 14px;
+	padding: 6px 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	margin: 2px 0px;
+
+	&--checked {
+		background-color: var(--primary-t);
+		border: 0px;
+		border-radius: 5px;
+
+		span {
+			color: var(--primary);
+			padding-left: 4px;
+			font-weight: bold;
+		}
+	}
+
+	span {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		transition: all 200ms ease;
+	}
+
+	&:hover {
+
+		span {
+			color: var(--primary);
+			padding-left: 4px;
+			font-weight: bold;
+		}
+	}
+}
