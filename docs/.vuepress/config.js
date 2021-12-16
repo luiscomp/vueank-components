@@ -11,7 +11,7 @@ module.exports = {
 	],
     themeConfig: {
         repoLabel: 'Github',
-        repo: 'https://github.com/luiscomp',
+        repo: 'https://github.com/luiscomp/vueank-components',
         docsDir: 'docs',
         editLinks: false,
         docsBranch: 'master',

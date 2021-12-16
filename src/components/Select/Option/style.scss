@@ -6,6 +6,13 @@
 	justify-content: space-between;
 	margin: 2px 0px;
 
+	&:focus {
+		background-color: var(--primary-t);
+		outline: none;
+		border: 0px;
+		border-radius: 5px;
+	}
+
 	&--checked {
 		background-color: var(--primary-t);
 		border: 0px;

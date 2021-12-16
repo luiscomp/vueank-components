@@ -42,6 +42,10 @@
 			&:checked {
 				--b: var(--sf-checkbox-border-active);
 			}
+			&:focus {
+				--s: 2px;
+				--b: var(--sf-checkbox-border-active);
+			}
 		}
 
 		input[color="primary"] {

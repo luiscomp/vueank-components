@@ -20,6 +20,8 @@
 				<img
 					src="../../../assets/icons/menu-down.svg"
 					:class="{ 'img-show': this.showOptions }"
+					tabindex="0"
+					@focus="onFocus()"
 				/>
 				<span ref="placeholder" class="placeholder">
 					{{ labelPlaceholder || placeholder }}
@@ -152,11 +154,12 @@ export default {
 			}
 		},
 		onClick(event) {
-			this.showOptions = true
-			this.showOptionsInViewport = !this.optionsInViewport()
+			this.onFocus()
 			this.$emit('click', event)
 		},
 		onFocus(event) {
+			this.showOptions = true
+			this.showOptionsInViewport = !this.optionsInViewport()
 			this.$emit('focus', event)
 		},
 		onBlur(event) {

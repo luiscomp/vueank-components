@@ -6,6 +6,7 @@
 				:checked="internalValue"
 				@input="onInput"
 				:color="color"
+				:tabindex="tabindex"
 			/>
 			<svg viewBox="0 0 21 21">
 				<polyline points="5 10.75 8.5 14.25 16 6"></polyline>
@@ -44,7 +45,11 @@ export default {
 		keyId: String,
 		label: String,
 		color: String,
-		checked: Boolean
+		checked: Boolean,
+		tabindex: {
+			type: String,
+			default: '0'
+		}
 	},
 	watch: {
 		checked(v) {

@@ -1,11 +1,18 @@
 <template>
 	<div
+		tabindex="0"
 		class="sf-option"
 		:class="{ 'sf-option--checked': isChecked }"
 		@click="onClick"
+		@keyup.enter="onClick"
+		@keyup.space="onClick"
 	>
 		<span ref="text"><slot /></span>
-		<sf-checkbox v-if="$parent.multiple" :checked="isChecked" />
+		<sf-checkbox
+			v-if="$parent.multiple"
+			:checked="isChecked"
+			tabindex="-1"
+		/>
 	</div>
 </template>
 
