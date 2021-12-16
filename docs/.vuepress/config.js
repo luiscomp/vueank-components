@@ -1,4 +1,7 @@
 module.exports = {
+    title: 'VueAnk Components',
+    description: 'Biblioteca de Componentes',
+    base: '/vueank-components/',
     locales: {
         '/': {
             lang: 'pt-BR',
